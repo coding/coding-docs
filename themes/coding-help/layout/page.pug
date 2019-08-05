@@ -1,0 +1,47 @@
+extends partials/base
+
+block main
+    .helpContainer
+        .helpContentWrapper
+            block left
+                include partials/navigation
+            block content
+                div.helpContent
+                    article.helpArticle.markdown-body 
+                        h1= page.pageTitle
+                        .helpArticleLine
+                        != page.content
+                    aside.helpTOC.helpTOCRight
+                        .helpTOCTitle 文章内容
+                        != toc(page.content, {max_depth: 2, list_number: false})
+                if page.pagePrev || page.pageNext
+                    .post-nav-area
+                        .post-nav
+                            if page.pagePrev
+                                a.pre(href=`${config.root || ''}${page.pagePrev}`, class={isOnly: !page.pageNext})
+                                    span.arrowLeft
+                                    span.postPrev
+                                        span 上一篇
+                                        span.title= page.pagePrevTitle
+                            if page.pageNext
+                                a.next(href=`${config.root || ''}${page.pageNext}`, class={isOnly: !page.pagePrev})
+                                    span.postNext
+                                        span 下一篇
+                                        span.title= page.pageNextTitle
+                                    span.arrowRight
+                .pageFeedbackArea
+                    .pageFeedback
+                        .fd-left 文档是否对您有用？
+                        .fd-right 
+                            .fd-btn.good
+                                span.icon.isActive
+                                    span.like
+                                    span.tooltips 感谢反馈
+                                span.isActive 有用
+                            .fd-btn.bad
+                                span.icon.disable
+                                    span.dislike
+                                    span.tooltips 感谢反馈
+                                span.disable 没用
+
+                    

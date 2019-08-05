@@ -1,0 +1,40 @@
+index:
+  title: 帮助中心主页
+
+sitemap:
+- compendium: 敏捷项目管理
+  path: agile/
+  icon: images/book-icons/agile.svg
+  categories:
+    - title: 测试管理
+      path: agile/testing/
+      links:
+        - title: 团队成员快速入门团队成员快速入门团队成员快速入门
+          path: agile/testing/team-quick-start.html
+        - title: 测试计划介绍
+          path: agile/testing/testing-plan-info.html
+    - title: 迭代管理
+      path: agile/iterator/
+      links:
+        - title: 迭代快速入门
+          path: agile/testing/iterator-quick-start.html
+        - title: 迭代计划介绍
+          path: agile/testing/iterator-plan-info.html
+- compendium: 个人设置
+  path: setting/
+  icon: images/book-icons/coding.svg
+  categories:
+    - title: 个人测试管理
+      path: setting/testing/
+      links:
+        - title: 个人团队成员快速入门
+          path: setting/testing/team-quick-start.html
+        - title: 个人测试计划介绍
+          path: setting/testing/testing-plan-info.html
+    - title: 个人迭代管理
+      path: setting/iterator/
+      links:
+        - title: 个人迭代快速入门
+          path: setting/testing/iterator-quick-start.html
+        - title: 个人迭代计划介绍
+          path: setting/testing/iterator-plan-info.html

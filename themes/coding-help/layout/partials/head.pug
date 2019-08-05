@@ -1,0 +1,17 @@
+head
+    block title
+      title= page.title || config.title
+    block description
+      meta(name="description", content=(page.description || config.description))
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="shortcut icon", href="https://dn-coding-net-production-static.codehub.cn/platform/favicon.ico")
+    if theme.stylesheets
+      each stylesheet in theme.stylesheets
+        link(rel="stylesheet", href=`${config.root || ''}${stylesheet}.css`)
+    block stylesheets
+    //- script(src="https://www.googletagmanager.com/gtag/js?id=UA-65952334-7")
+    script(src="/js/jquery.min.js")
+    script(src="/js/algoliasearch.min.js")
+    script(src="/js/autocomplete.min.js")

@@ -1,0 +1,46 @@
+- const {index, sitemap} = site.data.navigation
+
+.helpNavigation#asideMenuLeft(role="navigator")
+    .helpNavigationInner
+        .helpNavHeading
+            a(href=(config.root || '/'))
+                span.arrow
+                = index.title
+        .helpNavBookArea
+            each book in sitemap
+                - const isCurrentBook = new RegExp(`^${book.path}`).test(page.path)
+                .helpNavBook(class={isActive: isCurrentBook})
+                    .helpNavBookHead
+                        .helpNavBookName
+                            span.icon(style=`background-image: url(${url_for(book.icon)})`)
+                            span.name
+                                = book.compendium
+                        .selectArrow
+                    .helpNavDivider
+                    ol.helpNavBookBody
+                        each section in book.categories
+                            - const isCurrentSection= new RegExp(`^${section.path}`).test(page.path)
+                            li.helpNavSection(class={isExpanded: isCurrentSection})
+                                .helpNavTitle
+                                    span.category
+                                        = section.title
+                                    span.arrow
+                                ol.helpNavLinks
+                                    each link in section.links
+                                        li.helpNavLinkItem(class={isActive: page.path === link.path})
+                                            a.helpNavLink(href=`${config.root || ''}${link.path}`)= link.title
+            .helpNavBookListArea#helpNavBookListArea
+                .helpNavBookList-container
+                    .helpNavBookList
+                        each book in sitemap
+                            - const isCurrentBook = new RegExp(`^${book.path}`).test(page.path)
+                                a.book(href=`${config.root || ''}${book.categories[0].links[0].path}`)
+                                    span.helpNavBookName
+                                        span.icon(style=`background-image: url(${url_for(book.icon)})`)
+                                        span.name
+                                            = book.compendium
+                                    span.selectIcon(class={isActive: isCurrentBook})
+
+
+
+
