@@ -1,0 +1,9 @@
+{
+  "excludeFiles": [],
+  "rules": {
+    "no-long-code": [1, {
+      "length": 100,
+      "exclude": ["dot"]
+    }]
+  }
+}

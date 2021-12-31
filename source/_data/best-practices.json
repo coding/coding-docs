@@ -1,0 +1,290 @@
+
+[
+    {
+        "sort": "推荐", 
+        "list": [
+            {
+                "title": "DevOps 视角的前后端分离",
+                "image_title": "DevOps 视角的前后端分离",
+                "introduction": "前后端分离已成为互联网项目开发的标准模式——两者在各自的领域发展愈发地纵深。今天我们以 DevOps 的视角聊聊前后端分离。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "devops1.jpg",
+                "link": "/docs/best-practices/front-back.html"
+            },
+            {
+                "title": "DevOps - 从渐进式交付说起（含 Demo）",
+                "image_title": "DevOps - 从渐进式交付说起",
+                "introduction": "通过本篇文章，你将收获：什么是渐进式交付，为什么 DevOps 能够天然与其结合。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "cicd1.jpg",
+                "link": "/docs/best-practices/pro-delivery.html"
+            },
+            {
+                "title": "DevOps 的分与合",
+                "image_title": "DevOps 的分与合",
+                "introduction": "本文从开发和运维两个视角多层次的讲解什么场景应该单独 Dev 和 Ops 什么场景应该 DevOps，并使用一个 Demo 示例演示持续部署该如何实践。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "team1.jpg",
+                "link": "/docs/best-practices/devops-inside.html"
+            },            
+            {
+                "title": "一分钟开始持续集成之旅系列之：React + 腾讯云 COS 上传部署",
+                "image_title": "React + 腾讯云 COS 上传部署",
+                "introduction": "随着 Web 应用的发展，运行在浏览器端的 Web 应用能够承担更多且更复杂的业务交互需求。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "devops1.jpg",
+                "link": "/docs/best-practices/ci/1minute/react-cos.html"
+            },
+            {
+                "title": "一分钟开始持续集成之旅系列之：构建 Ruby + Sinatra 应用",
+                "image_title": "构建 Ruby + Sinatra 应用",
+                "introduction": "现代软件工程越来越复杂，为了能在提高开发效率的同时也能保证质量，越来越多团队开始践行敏捷开发方法。持续集成是敏捷开发的重要实践之一。它倡导团队通过自动化构建工具频繁地验证软件可用性，从而尽早发现集成错误并集中精力改善软件质量。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "cicd3.jpg",
+                "link": "/docs/best-practices/ci/1minute/ruby-sinatra.html"
+            },
+            {
+                "title": "如何使用 CODING 进行敏捷开发",
+                "image_title": "如何使用 CODING 进行敏捷开发",
+                "introduction": "敏捷研发是涉及整个软件工程的理念与实践，它的核心是 迭代和增量式软件开发方法。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "team1.jpg",
+                "link": "/docs/best-practices/coop/scrum.html"
+            }                      
+        
+        ]
+    },
+    {
+        "sort": "团队协作",
+        "list": [
+            {
+                "title": "如何使用 CODING 进行项目规划",
+                "image_title": "如何使用 CODING 进行项目规划",
+                "introduction": "CODING 为您的企业提供从概念到软件开发再到产品发布的全流程全周期软件研发管理，为您的研发团队提供全程助力，帮助研发团队捋清需求、不断迭代、快速反馈并能实时追踪项目进度直到完成。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "team1.jpg",
+                "link": "/docs/best-practices/coop/product-manager.html"
+            },
+            {
+                "title": "如何使用 CODING 进行敏捷开发",
+                "image_title": "如何使用 CODING 进行敏捷开发",
+                "introduction": "敏捷研发是涉及整个软件工程的理念与实践，它的核心是 迭代和增量式软件开发方法。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "cicd1.jpg",
+                "link": "/docs/best-practices/coop/scrum.html"
+            },
+            {
+                "title": "如何使用 CODING 进行瀑布流式研发",
+                "image_title": "如何使用 CODING 进行瀑布流式研发",
+                "introduction": "1970 年温斯顿·罗伊斯（Winston Royce）提出了著名的“瀑布模型”，直到 80 年代早期，它一直是唯一被广泛采用的软件开发模型。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "devops1.jpg",
+                "link": "/docs/best-practices/coop/waterfall.html"
+            }
+        ]
+    },
+    {
+        "sort": "持续集成",
+        "list": [
+            {
+                "title": "一分钟开始持续集成之旅系列之：Java + GWT 快速构建应用",
+                "image_title": "Java + GWT 快速构建应用",
+                "introduction": "Google Web Toolkit（GWT）是一个开源、免费的 Web 开发框架，通过该框架+持续集成，你可以使用 Java 轻松构建复杂、高性能的 JS 应用程序。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "devops1.jpg",
+                "link": "/docs/best-practices/ci/1minute/java-gwt.html"
+            },
+            {
+                "title": "一分钟开始持续集成之旅系列之：Javascript + Electron 开发桌面应用",
+                "image_title": "Javascript + Electron 开发桌面应用",
+                "introduction": "伴随着蓬勃发展的 web 开发生态，原生桌面开发日渐凋零，混合了 web 技术栈与原生能力的 electron 应运而生。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "cicd2.jpg",
+                "link": "/docs/best-practices/ci/1minute/javascript-electron.html"
+            },
+            {
+                "title": "一分钟开始持续集成之旅系列之：快速构建并验证代码",
+                "image_title": "快速构建并验证代码",
+                "introduction": "开发过程中，当产品提出一个需求，首先要从主分支中 checkout 出特性分支，在本地实现功能后再进行构建、测试、提交。有没有什么办法让琐碎的事情自动运行呢？",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "team3.jpg",
+                "link": "/docs/best-practices/ci/1minute/maven-spring-boot.html"
+            },
+            {
+                "title": "一分钟开始持续集成之旅系列之：Node + Express 应用",
+                "image_title": "Node + Express 应用",
+                "introduction": "通过 CODING CI 帮助我们来完成 Node + Typescript + Express 搭建一个 “每日一句” 的小工具。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "cicd2.jpg",
+                "link": "/docs/best-practices/ci/1minute/maven-spring-boot.html"
+            },         
+            {
+                "title": "一分钟开始持续集成之旅系列之：Python + Flask 构建应用",
+                "image_title": "Python + Flask 构建应用",
+                "introduction": "Flask 是 Python 中最流行的 Web 框架之一，以小巧、灵活、可扩展性强著称。本文将通过一个简单的 Demo 项目，来演示如何快速集成 Python + Flask 项目。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "team2.jpg",
+                "link": "/docs/best-practices/ci/1minute/python-flask.html"
+            },
+            {
+                "title": "一分钟开始持续集成之旅系列之：React + 腾讯云 COS 上传部署",
+                "image_title": "React + 腾讯云 COS 上传部署",
+                "introduction": "随着 Web 应用的发展，运行在浏览器端的 Web 应用能够承担更多且更复杂的业务交互需求，前后端分离模式得以流行，并催生了如 Vue 、React 等单页应用框架。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "cicd2.jpg",
+                "link": "/docs/best-practices/ci/1minute/react-cos.html"
+            },               
+            {
+                "title": "一分钟开始持续集成之旅系列之：构建 Ruby + Sinatra 应用",
+                "image_title": "构建 Ruby + Sinatra 应用",
+                "introduction": "现代软件工程越来越复杂，为了能在提高开发效率的同时也能保证质量，越来越多团队开始践行敏捷开发方法。持续集成是敏捷开发的重要实践之一。它倡导团队通过自动化构建工具频繁地验证软件可用性，从而尽早发现集成错误并集中精力改善软件质量。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "team3.jpg",
+                "link": "/docs/best-practices/ci/1minute/ruby-sinatra.html"
+            }
+        ]
+    },
+    {
+        "sort": "持续部署",
+        "list": [
+            {
+                "title": "Kubernetes 两步验证 - 使用 Serverless 实现动态准入控制",
+                "image_title": "使用 Serverless 实现动态准入控制",
+                "introduction": "如果对 Kubernetes 集群安全特别关注，那么我们可能想要实现这些需求：如何实现 Kubernetes 集群的两步验证? 如何验证部署的镜像是否安全合规，使得仅允许部署公司内部镜像仓库的 Docker 镜像？",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "devops2.jpg",
+                "link": "/docs/best-practices/cd/k8s-serverless.html"
+            },
+            {
+                "title": "使用腾讯云主机进行持续部署",
+                "image_title": "使用腾讯云主机进行持续部署",
+                "introduction": "在当今各种强调云原生的背景下，似乎云主机已经逐渐被大众所抛弃。但是事实真的是这样么？",
+                "author": "官方出品",
+                "date": "2020-10-15",
+                "image": "cicd2.jpg",
+                "link": "/docs/best-practices/cd/cvm-cd.html"
+            },
+            {
+                "title": "Kubernetes 蓝绿部署实践",
+                "image_title": "Kubernetes 蓝绿部署实践",
+                "introduction": "在当今各种强调云原生的背景下，似乎云主机已经逐渐被大众所抛弃。但是事实真的是这样么？",
+                "author": "官方出品",
+                "date": "2020-10-15",
+                "image": "team2.jpg",
+                "link": "/docs/best-practices/cd/blue-green.html"
+            },
+            {
+                "title": "在 Kubernetes 上持续部署 Helm 应用",
+                "image_title": "在 Kubernetes 上持续部署 Helm 应用",
+                "introduction": "Helm 是 Kubernetes 的包管理器，也是一个强大的 yaml 模版引擎。",
+                "author": "官方出品",
+                "date": "2020-10-15",
+                "image": "devops2.jpg",
+                "link": "/docs/best-practices/cd/k8s-helm.html"
+            },
+            {
+                "title": "Nginx-ingress 实现自动化灰度发布",
+                "image_title": "Nginx-ingress 实现自动化灰度发布",
+                "introduction": "在 Kubernetes 上的应用实现灰度发布，最简单的方案是引入官方的 Nginx-ingress 来实现。",
+                "author": "官方出品",
+                "date": "2020-10-15",
+                "image": "cicd2.jpg",
+                "link": "/docs/best-practices/cd/nginx-ingress.html"
+            },
+            {
+                "title": "用持续部署实现滚动发布",
+                "image_title": "用持续部署实现滚动发布",
+                "introduction": "软件世界比以往任何时候都更快。为了保持竞争力，在既要求尽快推出新的软件版本的同时，还需要避免中断活跃用户访问，影响用户体验。越来越多企业已将其应用迁移到 Kubernetes 集群。",
+                "author": "官方出品",
+                "date": "2020-10-15",
+                "image": "team2.jpg",
+                "link": "/docs/best-practices/cd/rolling-release.html"
+            },
+            {
+                "title": "持续部署 + TKE Mesh 灰度发布实践",
+                "image_title": "持续部署 + TKE Mesh 灰度发布实践",
+                "introduction": "灰度发布（又名金丝雀发布）可实现业务从老版本到新版本的平滑过渡，并且避免升级过程中出现的问题对用户造成的影响。",
+                "author": "官方出品",
+                "date": "2020-10-15",
+                "image": "cicd3.jpg",
+                "link": "/docs/best-practices/cd/tke-mesh.html"
+            }            
+        ]
+    },
+    {
+        "sort": "DevOps 实践",
+        "list": [
+            {
+                "title": "DevOps - 从渐进式交付说起（含 Demo）",
+                "image_title": "DevOps - 从渐进式交付说起",
+                "introduction": "通过本篇文章，你将收获：什么是渐进式交付，为什么 DevOps 能够天然与其结合。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "cicd2.jpg",
+                "link": "/docs/best-practices/pro-delivery.html"
+            },
+            {
+                "title": "DevOps 视角的前后端分离",
+                "image_title": "DevOps 视角的前后端分离",
+                "introduction": "前后端分离已成为互联网项目开发的标准模式——两者在各自的领域发展愈发地纵深。今天我们以 DevOps 的视角聊聊前后端分离。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "devops3.jpg",
+                "link": "/docs/best-practices/front-back.html"
+            },
+            {
+                "title": "一分钟开始持续集成之旅系列之：React + 腾讯云 COS 上传部署",
+                "image_title": "React + 腾讯云 COS 上传部署",
+                "introduction": "随着 Web 应用的发展，运行在浏览器端的 Web 应用能够承担更多且更复杂的业务交互需求。",
+                "author": "官方出品",
+                "date": "2020-04-07",
+                "image": "team2.jpg",
+                "link": "/docs/best-practices/ci/1minute/react-cos.html"
+            },
+            {
+                "title": "持续测试 - DevOps 时代的高效测试之钥",
+                "image_title": "DevOps 时代的高效测试之钥",
+                "introduction": "持续测试 - DevOps 时代的高效测试之钥",
+                "author": "官方出品",
+                "date": "2020-05-08",
+                "image": "team2.jpg",
+                "link": "/docs/best-practices/testmanagement/continuous-test.html"
+            },
+            {
+                "title": "CODING 自动化执行能力让测试更快、更自由",
+                "image_title": "CODING 自动化执行能力让测试更快、更自由",
+                "introduction": "CODING 自动化执行能力让测试更快、更自由",
+                "author": "官方出品",
+                "date": "2020-05-08",
+                "image": "team2.jpg",
+                "link": "/docs/best-practices/testmanagement/automatic-test.html"
+            },
+            {
+                "title": "CODING 中实践迭代内的持续测试",
+                "image_title": "CODING 中实践迭代内的持续测试",
+                "introduction": "CODING 中实践迭代内的持续测试",
+                "author": "官方出品",
+                "date": "2020-05-08",
+                "image": "team2.jpg",
+                "link": "/docs/best-practices/testmanagement/sprint-test.html"
+            }
+        ]
+    }
+]

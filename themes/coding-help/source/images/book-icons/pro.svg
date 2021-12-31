@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>premium</title>
+    <g id="Support-|-Article" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1105.000000, -578.000000)">
+            <g id="dropdown-copy-4" transform="translate(1097.000000, 78.000000)">
+                <g id="row" transform="translate(0.000000, 492.000000)">
+                    <g id="premium" transform="translate(8.000000, 8.000000)">
+                        <rect id="Rectangle" fill="#FFB917" x="0" y="0" width="24" height="24"></rect>
+                        <g id="Path" fill="#FFFFFF">
+                            <polygon points="12 6 14.837891 9.7832031 19 8 18 14 6 14 5 8 9.162109 9.7832031"></polygon>
+                            <path d="M6,16 L18,16 L18,17 C18,17.552 17.552,18 17,18 L7,18 C6.448,18 6,17.552 6,17 L6,16 Z" opacity="0.699999988"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

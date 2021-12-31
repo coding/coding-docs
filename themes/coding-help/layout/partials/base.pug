@@ -13,7 +13,16 @@ html(lang="zh-cmn-Hans")
           //- include navigation
         block content
       block footer
-        include help-footer
+        != footer()
+    script(src="/docs/js/jquery.min.js")
+    script(src="/docs/js/algoliasearch.min.js")
+    script(src="/docs/js/autocomplete.min.js")
+    script(src="/docs/js/highlight.pack.js")
+    script(src="/docs/js/highlightjs-line-numbers.min.js")
+    script(src="/docs/js/clipboard.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js")
+    script(src="/docs/js/medium-zoom.min.js")
+    script(src="/docs/js/dayjs.min.js")
     script
         include base.js
-        include algoliasearch-init.js
+    != footerJS()

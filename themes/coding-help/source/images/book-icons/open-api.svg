@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>open-api</title>
+    <g id="Support-|-Article" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1105.000000, -738.000000)">
+            <g id="dropdown-copy-4" transform="translate(1097.000000, 78.000000)">
+                <g id="row-copy-2" transform="translate(0.000000, 652.000000)">
+                    <g id="open-api" transform="translate(8.000000, 8.000000)">
+                        <rect id="Rectangle" fill="#0084FF" x="0" y="0" width="24" height="24"></rect>
+                        <g id="book-icons/open-api" fill="#FFFFFF" fill-rule="nonzero">
+                            <path d="M20,8 L20,17 L18,17 L18,8 L20,8 Z M14.5,8 C16.1568542,8 17.5,9.34314575 17.5,11 C17.5,12.6568542 16.1568542,14 14.5,14 L13.5,14 L13.5,17 L11.5,17 L11.5,8 L14.5,8 Z M8.5,8 L11,17 L9,17 L8.5,15 L6.5,15 L6,17 L4,17 L6.5,8 L8.5,8 Z M7.5,11 L7,13 L8,13 L7.5,11 Z M14.5,10 L13.5,10 L13.5,12 L14.5,12 C15.0522847,12 15.5,11.5522847 15.5,11 C15.5,10.4477153 15.0522847,10 14.5,10 Z" id="api"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

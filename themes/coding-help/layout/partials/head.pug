@@ -10,8 +10,14 @@ head
     if theme.stylesheets
       each stylesheet in theme.stylesheets
         link(rel="stylesheet", href=`${config.root || ''}${stylesheet}.css`)
+    link(rel="stylesheet", href="/docs/styles/highlight/styles/tomorrow.css")
+    != footerCSS()
     block stylesheets
-    //- script(src="https://www.googletagmanager.com/gtag/js?id=UA-65952334-7")
-    script(src="/js/jquery.min.js")
-    script(src="/js/algoliasearch.min.js")
-    script(src="/js/autocomplete.min.js")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css")
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-65952334-11")
+    script(type='text/javascript').
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'UA-65952334-11');
+      

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>api-doc</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Support-|-Article" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1105.000000, -618.000000)">
+            <g id="dropdown-copy-4" transform="translate(1097.000000, 78.000000)">
+                <g id="row-copy-2" transform="translate(0.000000, 532.000000)">
+                    <g id="api-doc" transform="translate(8.000000, 8.000000)">
+                        <rect id="Rectangle" fill="#0084FF" x="0" y="0" width="24" height="24"></rect>
+                        <g id="book-icons/api-doc" fill="#FFFFFF">
+                            <g id="contacts" transform="translate(5.000000, 5.000000)">
+                                <path d="M9.30769231,0 L0,0 L0,14 L9.30769231,14 C10.2384615,14 11,13.2125 11,12.25 L11,1.75 C11,0.7875 10.2384615,0 9.30769231,0 Z M3.5,3 L7.5,3 C7.77614237,3 8,3.22385763 8,3.5 L8,5.5 C8,5.77614237 7.77614237,6 7.5,6 L3.5,6 C3.22385763,6 3,5.77614237 3,5.5 L3,3.5 C3,3.22385763 3.22385763,3 3.5,3 Z" id="Shape" fill-rule="nonzero"></path>
+                                <rect id="Rectangle" fill-rule="nonzero" opacity="0.600000024" x="12" y="2" width="2" height="3"></rect>
+                                <rect id="Rectangle" fill-rule="nonzero" opacity="0.600000024" x="12" y="6" width="2" height="3"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

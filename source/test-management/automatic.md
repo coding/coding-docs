@@ -1,0 +1,81 @@
+---
+title: 自动化用例库 - CODING 帮助中心
+pageTitle: 自动化用例库
+pagePrevTitle: 管理测试计划
+pagePrev: test-management/plans/manage.html
+pageNextTitle: 分析测试报告
+pageNext: test-management/report.html
+---
+
+### [功能介绍](#intro)
+
+自动化用例库指的是能够自动运行的测试用例库。无需创建测试计划，基于测试用例与 CODING 代码仓库中的自动化代码建立匹配关系，直接在自动化用例库里进行执行用例就能够查看结果，降低使用自动化测试的繁琐步骤。
+
+### [1. 登记或导入用例库](#1)
+
+若已有测试代码框架，点击自动化用例库页面右上角的「登记用例库」，选择测试类型与框架等信息完成登记。
+
+![](https://help-assets.codehub.cn/enterprise/20210930113208.png)
+
+若希望直接上手使用，可以直接点击「导入示例自动化代码库」，目前支持导入 JUnit 、 Pytest 框架示例用例库，完成导入后代码仓库将自动创建对应的代码库并完成登记。
+
+![](https://help-assets.codehub.cn/enterprise/20210928160548.png)
+
+### [2. 生成自动化代码](#2)
+
+「功能用例」中包含了测试管理下的所有测试用例，选择需要进行自动化任务的测试用例，点击生成步骤代码后，参考并编写测试代码，填入至代码仓库中。
+
+![](https://help-assets.codehub.cn/enterprise/20210928163111.png)
+
+多选功能用例后，点击「操作」→「生成代码」支持批量生成代码，参考并编写测试代码，填入至代码仓库中。
+
+![](https://help-assets.codehub.cn/enterprise/20210930145653.png)
+
+### [3. 代码解析与匹配](#3)
+
+在已登记的自动化用例库中设置预匹配规则，填写需要进行代码匹配的注释和属性名称。
+
+![](https://help-assets.codehub.cn/enterprise/20210929165144.png)
+
+运行代码解析与自动匹配任务，建立自动化用例与功能用例的关联。
+
+![](https://help-assets.codehub.cn/enterprise/20210928153714.png)
+
+若未完全覆盖，你可以在「自动化用例」tab 栏中手动关联功能用例
+
+![](https://help-assets.codehub.cn/enterprise/20210928164835.png)
+
+也可以在「功能用例」tab 栏中手动关联自动化用例。
+
+![](https://help-assets.codehub.cn/enterprise/20210928154625.png)
+
+#### [Java 代码解析规则](#java)
+ 
+1.  符合 Maven/Gradle 规范，代码目录：`projectName/src/test/java`
+2.  测试方法带有 @Test 注解。
+    
+    满足上述条件的测试代码将被正常解析。
+
+#### [Pytest 代码解析规则](#pytest)
+
+1.  测试文件以 `test_` 开头，或以 `_test` 结尾。
+2.  测试类以 Test 开头，并且不能带有 init 方法。 <br/>
+3.  测试函数以 `test_` 开头。
+    
+    满足上述规范的测试代码将被正常解析。
+
+### [4. 运行自动化用例库](#4)
+
+你可以在测试计划设置内配置运行自动化用例库所需的环境变量与节点。
+
+![](https://help-assets.codehub.cn/enterprise/20210517172328.gif)
+
+你可以在「自动化用例」或「功能用例」中单独或批量执行自动化用例。
+
+![](https://help-assets.codehub.cn/enterprise/20210930150752.png)
+
+自动化任务运行完成后，你可以在「运行记录」处查看用例执行状态结果、日志与持续集成任务（Job）。
+
+![](https://help-assets.codehub.cn/enterprise/20210929172947.png)
+
+==== 2021/09/29 ====

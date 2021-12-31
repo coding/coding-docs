@@ -2,39 +2,1579 @@ index:
   title: 帮助中心主页
 
 sitemap:
-- compendium: 敏捷项目管理
-  path: agile/
+- compendium: 入门指南
+  path: start/
+  icon: images/book-icons/quick-started.svg
+  isHide: false
+  categories:
+    - title: 认识 CODING DevOps
+      num: 0
+      links:
+        - title: 产品简介
+          path:  start/new.html
+          num: 0
+        - title: 使用流程
+          path: start/process.html
+          num: 1
+        - title: 团队、项目与项目集的关系
+          path: start/relation.html
+          num: 2
+        - title: 权限管理
+          path: start/permission.html
+          num: 3
+    - title: 注册与邀请
+      path: start/register-invite.html
+      num: 1
+    - title: 新建项目
+      path: start/project.html
+      num: 2
+    - title: 开始项目协同
+      path: start/project-plan.html
+      num: 3
+    - title: 使用代码仓库
+      path: start/repository.html
+      num: 4
+    - title: 启动代码扫描
+      path: start/scan.html
+      num: 5
+    - title: 编译构建
+      path: start/ci.html
+      num: 6
+    - title: 管理制品
+      path: start/artifact.html
+      num: 7
+    - title: 实施持续部署
+      path: start/cd.html
+      num: 8
+    - title: 管理测试用例
+      path: start/test-management.html
+      num: 9
+    - title: 管理项目文档
+      path: start/wiki.html
+      num: 10
+    - title: 安全等级说明
+      path: start/security.html
+      num: 11
+    - title: 常见问题
+      path: start/faq.html
+      num: 12
+#    - title: 最佳实践
+#      num: 13
+#      links:
+#        - title: DevOps 视角的前后端分离
+#          path: start/best-practice/front-back.html
+#          num: 0
+#        - title: DevOps - 从渐进式交付说起(含实践 Demo)
+#          path: start/best-practice/pro-delivery.html
+#          num: 1
+#        - title: DevOps 的分与合
+#          path: start/best-practice/devops-inside.html
+#          num: 2
+#        - title: Serverless 驱动的 DevOps 新形态
+#          path: start/best-practice/opsless.html
+#          num: 3
+#        - title: CODING 微服务架构演进之路
+#          path: start/best-practice/microservice.html
+#          num: 4
+#          last: true
+
+- compendium: 项目协同
+  path: collaboration/
   icon: images/book-icons/agile.svg
+  isHide: false
   categories:
-    - title: 测试管理
-      path: agile/testing/
+    - title: 产品简介
+      path: collaboration/intro.html
+      num: 0
+    - title: 选择合适的协作模式
+      path: collaboration/pattern-choice.html
+      num: 1
+    - title: Scrum 敏捷项目管理
+      num: 2
       links:
-        - title: 团队成员快速入门团队成员快速入门团队成员快速入门
-          path: agile/testing/team-quick-start.html
-        - title: 测试计划介绍
-          path: agile/testing/testing-plan-info.html
-    - title: 迭代管理
-      path: agile/iterator/
+        - title: 模式介绍
+          path: collaboration/pattern/scrum/intro.html
+          num: 0
+        - title: 管理 Backlog
+          path: collaboration/pattern/scrum/backlog.html
+          num: 1
+        - title: 管理迭代
+          path: collaboration/pattern/scrum/iterations.html
+          num: 2
+        - title: 管理史诗
+          path: collaboration/pattern/scrum/epics.html
+          num: 3
+        - title: 管理需求
+          path: collaboration/pattern/scrum/requirements.html
+          num: 4
+        - title: 管理任务 
+          path: collaboration/pattern/scrum/tasks.html
+          num: 5
+        - title: 管理缺陷 
+          path: collaboration/pattern/scrum/bugs.html
+          num: 6
+        - title: 故事点
+          path: collaboration/pattern/scrum/story-points.html
+          num: 7
+        - title: 迭代统计
+          path: collaboration/pattern/scrum/statistics.html
+          num: 8
+        - title: 总结复盘
+          path: collaboration/pattern/scrum/review.html
+          num: 9 
+    - title: 经典项目管理
+      num: 3
       links:
-        - title: 迭代快速入门
-          path: agile/testing/iterator-quick-start.html
-        - title: 迭代计划介绍
-          path: agile/testing/iterator-plan-info.html
-- compendium: 个人设置
-  path: setting/
-  icon: images/book-icons/coding.svg
+        - title: 模式介绍
+          path: collaboration/pattern/classic/intro.html
+          num: 0
+        - title: 管理需求
+          path: collaboration/pattern/classic/requirements.html
+          num: 1
+        - title: 计划
+          path: collaboration/pattern/classic/plan.html
+          num: 2
+        - title: 管理迭代
+          path: collaboration/pattern/classic/iterations.html
+          num: 3
+        - title: 管理任务
+          path: collaboration/pattern/classic/tasks.html
+          num: 4
+        - title: 管理缺陷
+          path: collaboration/pattern/classic/bugs.html
+          num: 5
+        - title: 阻塞关系
+          path: collaboration/pattern/classic/blocking.html
+          num: 6
+        - title: 工时统计
+          path: collaboration/pattern/classic/working-hours.html
+          num: 7
+        - title: 跟踪进度
+          path: collaboration/pattern/classic/track.html
+          num: 8
+    - title: 事项管理
+      num: 4
+      links:
+        - title: 导入&导出事项
+          path: collaboration/customize/import-export.html
+          num: 0
+        - title: 自定义事项类型
+          path: collaboration/customize/type.html
+          num: 1
+        - title: 自定义事项属性
+          path: collaboration/customize/attributes.html
+          num: 2
+        - title: 自定义工作流
+          path: collaboration/customize/workflow.html
+          num: 3
+        - title: 自定义模板
+          path: collaboration/customize/template.html
+          num: 4      
+        - title: 筛选事项
+          path: collaboration/customize/filter.html
+          num: 5
+        - title: 引用资源&上传附件
+          path: collaboration/customize/references.html
+          num: 6
+        - title: 管理版本
+          path: collaboration/customize/version-control.html
+          num: 7
+        - title: 管理标签
+          path: collaboration/customize/label.html
+          num: 8
+        - title: 管理事项视图
+          path: collaboration/customize/view.html
+          num: 9
+        - title: 快速发起腾讯会议
+          path: collaboration/customize/meeting.html
+          num: 10
+    - title: 最佳实践
+      num: 5
+      links:
+        - title: 如何使用 CODING 进行项目规划
+          path: collaboration/best-practice/product-manager.html
+          num: 0
+        - title: 如何使用 CODING 进行敏捷开发
+          path: collaboration/best-practice/scrum.html
+          num: 1
+        - title: 如何使用 CODING 进行瀑布流式研发
+          path: collaboration/best-practice/waterfall.html
+          num: 2
+    - title: 常见问题
+      path: collaboration/faq.html
+      num: 6
+      bold: 1          
+    - title: 词汇表
+      path: collaboration/glossary.html
+      num: 7
+      bold: 1
+
+- compendium: 代码仓库
+  path: repo/
+  icon: images/book-icons/git.svg
+  isHide: false
   categories:
-    - title: 个人测试管理
-      path: setting/testing/
+    - title: 产品简介
+      path: repo/intro.html
+      num: 0
+    - title: 快速开始
+      path: repo/start.html
+      num: 1
+    - title: 代码仓库管理
+      num: 2
       links:
-        - title: 个人团队成员快速入门
-          path: setting/testing/team-quick-start.html
-        - title: 个人测试计划介绍
-          path: setting/testing/testing-plan-info.html
-    - title: 个人迭代管理
-      path: setting/iterator/
+        - title: 创建仓库
+          path: repo/manage/create.html
+          num: 0
+        - title: 导入或关联外部仓库
+          path: repo/manage/sync-relate.html
+          num: 1
+        - title: 查看仓库详情
+          path: repo/manage/view.html
+          num: 2
+        - title: 设置仓库基本信息
+          path: repo/manage/basic.html
+          num: 3
+        - title: 归档仓库
+          path: repo/manage/archive.html
+          num: 4
+        - title: 删除/重置仓库
+          path: repo/manage/delete.html
+          num: 5
+        - title: 恢复已删除仓库
+          path: repo/manage/restore.html
+          num: 6
+        - title: 管理代码仓库卡片
+          path: repo/manage/card.html
+          num: 7 
+        - title: 通过本地命令行管理仓库
+          path: repo/manage/cli.html
+          num: 8
+    - title: SVN 仓库使用
+      num: 3
       links:
-        - title: 个人迭代快速入门
-          path: setting/testing/iterator-quick-start.html
-        - title: 个人迭代计划介绍
-          path: setting/testing/iterator-plan-info.html
+        - title: 创建 SVN 仓库
+          path: repo/svn/create.html
+          num: 0
+        - title: 访问 SVN 仓库
+          path: repo/svn/access.html
+          num: 1
+        - title: 管理 SVN 目录权限
+          path: repo/svn/permission.html
+          num: 2
+    - title: SSH 协议使用
+      num: 4
+      links:
+        - title: 配置 SSH 公钥
+          path: repo/ssh/config.html
+          num: 0
+        - title: 密钥指纹鉴权
+          path: repo/ssh/fingerprint.html
+          num: 1
+        - title: 通过 SSH 协议推拉代码
+          path: repo/ssh/pull-push.html
+          num: 2
+    - title: 分支管理
+      num: 5
+      links:
+        - title: 创建分支
+          path: repo/branch/create.html
+          num: 0
+        - title: 设置默认分支
+          path: repo/branch/default.html
+          num: 1
+        - title: 设置保护分支
+          path: repo/branch/protected.html
+          num: 2
+        - title: 设置隐藏分支
+          path: repo/branch/hidden.html
+          num: 3
+        - title: 使用代码所有者机制
+          path: repo/branch/codeowner.html
+          num: 4
+    - title: 合并请求与代码评审
+      num: 6
+      links:
+        - title: 调整合并请求设置
+          path: repo/mr-review/mr-set.html
+          num: 0
+        - title: 合并分支
+          path: repo/mr-review/mr.html
+          num: 1
+        - title: 评审合并请求
+          path: repo/mr-review/review.html
+          num: 2
+    - title: 版本与标签
+      num: 7
+      links:
+        - title: 管理版本发布
+          path: repo/version/release.html
+          num: 0
+        - title: 管理版本标签
+          path: repo/version/tag.html
+          num: 1
+    - title: 代码仓库安全
+      num: 8
+      links:
+        - title: 检查仓库安全风险
+          path: repo/security/security.html
+          num: 0
+        - title: 设置仓库访问方式
+          path: repo/security/access.html
+          num: 1
+        - title: 使用 GPG 签名 commit 记录
+          path: repo/security/gpg-sign.html
+          num: 2
+        - title: 开启提交者及提交注释验证
+          path: repo/security/push.html
+          num: 3
+        - title: 锁定文件/文件夹
+          path: repo/security/lock.html
+          num: 4
+    - title: Git 通识
+      num: 9
+      links:
+        - title: 基础概念
+          path: repo/git/basic.html
+          num: 0
+        - title: 常用命令
+          path: repo/git/commands.html
+          num: 1
+        - title: LFS 使用
+          path: repo/git/lfs.html
+          num: 2
+        - title: Go get 支持
+          path: repo/git/go-get.html
+          num: 3
+    - title: 最佳实践
+      num: 10
+      links:
+        - title: 在代码仓库中使用代码扫描
+          path: repo/best-practice/new.html
+          num: 1
+        - title: 提交合并请求时触发代码扫描
+          path: repo/best-practice/mr.html
+          num: 2
+        - title: 如何提高代码质量
+          path: repo/best-practice/policy.html
+          num: 3
+    - title: 常见问题
+      path: repo/faq.html
+      num: 11
+    - title: 词汇表
+      path: repo/glossary.html
+      num: 12
+      bold: 1
+
+- compendium: 代码扫描
+  path: code-scan/
+  icon: images/book-icons/code-scan.svg
+  isHide: false
+  categories:
+    - title: 产品简介
+      path: code-scan/intro.html
+      num: 0
+    - title: 快速开始
+      path: code-scan/start.html
+      num: 1
+    - title: 扫描任务
+      path: code-scan/task.html
+      num: 2
+    - title: 扫描方案
+      num: 3
+      links:
+        - title: 产品简介
+          path: code-scan/plan/intro.html
+          num: 0
+        - title: Xcheck 工具
+          path: code-scan/plan/xcheck.html
+          num: 1
+        - title: 集成外部扫描工具
+          path: code-scan/plan/tools.html
+          num: 2
+        - title: 方案模板
+          path: code-scan/plan/template.html
+          num: 3
+        - title: 自动匹配语言
+          path: code-scan/plan/auto-match.html
+          num: 4   
+    - title: 常见问题
+      path: code-scan/faq.html
+      num: 4
+    - title: 词汇表
+      path: code-scan/glossary.html
+      num: 5
+      bold: 1
+
+- compendium: 测试管理
+  path: test-management/
+  icon: images/book-icons/testing.svg
+  isHide: false
+  categories:
+    - title: 快速开始
+      path: test-management/start.html
+      num: 0
+    - title: 测试用例
+      num: 1
+      links:
+        - title: 创建用例
+          path: test-management/cases/create.html
+          num: 0
+        - title: 关联需求
+          path: test-management/cases/requirements.html
+          num: 1
+        - title: 用例评审
+          path: test-management/cases/review.html
+          num: 2
+    - title: 测试计划
+      num: 2
+      links:
+        - title: 创建测试计划
+          path: test-management/plans/create.html
+          num: 0
+        - title: 执行测试计划
+          path: test-management/plans/execute.html
+          num: 1     
+        - title: 管理测试计划
+          path: test-management/plans/manage.html
+          num: 2
+    - title: 自动化用例库
+      path: test-management/automatic.html
+      num: 3
+    - title: 分析测试报告
+      path: test-management/report.html
+      num: 4
+    - title: 测试活动概览
+      path: test-management/overview.html
+      num: 5
+    - title: 最佳实践
+      path: test-management/best-practice.html
+      num: 6
+    - title: 词汇表
+      path: test-management/glossary.html
+      num: 7
+      bold: 1
+  
+- compendium: 持续集成
+  path: ci/
+  icon: images/book-icons/ci.svg
+  isHide: false
+  categories:
+    - title: 产品简介
+      path: ci/intro.html
+      num: 0
+    - title: 快速开始
+      path: ci/start.html
+      num: 1
+    - title: 编写构建流程
+      num: 2
+      links:
+        - title: 文本编辑器
+          path: ci/process/text.html
+          num: 0
+        - title: 流程配置详情
+          path: ci/process/detail.html
+          num: 1
+        - title: 图形化编辑器
+          path: ci/process/visual-editor.html
+          num: 2
+    - title: 配置构建计划
+      num: 3
+      links:
+        - title: 触发规则
+          path: ci/configuration/trigger.html
+          num: 0
+        - title: 环境变量
+          path: ci/configuration/env.html
+          num: 1
+        - title: 构建快照
+          path: ci/configuration/snapshot.html
+          num: 2
+        - title: 缓存目录
+          path: ci/configuration/cache.html
+          num: 3
+    - title: 构建环境依赖包
+      num: 4
+      links:
+        - title: Go
+          path: ci/depend/go.html
+          num: 0
+        - title: Maven
+          path: ci/depend/maven.html
+          num: 1
+        - title: PHP
+          path: ci/depend/php.html
+          num: 2
+    - title: 构建制品
+      num: 5
+      links:
+        - title: Composer
+          path: ci/artifacts/composer.html
+          num: 0
+        - title: Docker
+          path: ci/artifacts/docker.html
+          num: 1
+        - title: Generic
+          path: ci/artifacts/generic.html
+          num: 2
+        - title: Maven
+          path: ci/artifacts/maven.html
+          num: 3
+        - title: Npm
+          path: ci/artifacts/npm.html
+          num: 4
+        - title: 推送至外部制品库
+          path: ci/artifacts/outside.html
+          num: 5
+        - title: 自动生成版本号
+          path: ci/artifacts/version.html
+          num: 6
+        - title: 推送至 TCR 镜像仓库
+          path: ci/artifacts/tcr.html
+          num: 7
+
+    - title: 构建节点
+      num: 6
+      links:
+        - title: 构建节点类型
+          path: ci/node/type.html
+          num: 0
+        - title: 默认节点环境
+          path: ci/node/env.html
+          num: 1         
+        - title: 自定义节点
+          path: ci/node/customize.html
+          num: 2
+        - title: Worker 常用命令
+          path: ci/node/worker.html
+          num: 3
+        - title: 构建节点池
+          path: ci/node/pool.html
+          num: 4
+    - title: 管理构建计划
+      num: 7
+      links:
+        - title: 分组管理
+          path: ci/manage/group.html
+          num: 0
+        - title: 构建计划模板
+          path: ci/manage/team-template.html
+          num: 1
+
+    - title: 系统插件
+      num: 8
+      links:
+        - title: 上传 Generic 类型制品
+          path: ci/plugins/generic.html
+          num: 0
+        - title: 调取已录入的凭据
+          path: ci/plugins/credentials.html
+          num: 1
+        - title: 自动添加合并请求评审者
+          path: ci/plugins/reviewer.html
+          num: 2
+        - title: 人工确认
+          path: ci/plugins/manual-confirmation.html
+          num: 3
+        - title: 收集通用报告
+          path: ci/plugins/html-report.html
+          num: 4
+        - title: 上传 API 文档
+          path: ci/plugins/api-doc.html
+          num: 5
+        - title: 在阶段末尾执行插件
+          path: ci/plugins/post-step.html
+          num: 6
+        - title: 代码扫描
+          path: ci/plugins/code-scan.html
+          num: 7
+        - title: 镜像更新至 K8s 集群
+          path: ci/plugins/mirror-k8s.html
+          num: 8
+        - title: 错误信号
+          path: ci/plugins/error-skip.html
+          num: 9
+        - title: 邮件通知
+          path: ci/plugins/smtp.html
+          num: 10
+
+    - title: 自定义团队插件
+      num: 9
+      links:
+        - title: 产品简介
+          path: ci/plugins/customize/overview.html
+          num: 0
+        - title: 开发指引
+          path: ci/plugins/customize/develop.html
+          num: 1
+        - title: 声明文件
+          path: ci/plugins/customize/format.html
+          num: 2
+        - title: qci-plugin
+          path: ci/plugins/customize/qci-plugin.html
+          num: 3
+
+    - title: 最佳实践
+      num: 10
+      links:
+        - title: 在持续集成中使用 Docker
+          path: ci/practice/docker.html
+          num: 0
+        - title: 如何使用 when 条件判断语法
+          path: ci/practice/jenkins-when.html
+          num: 1
+        - title: 在持续集成中使用 SSH
+          path: ci/practice/ssh.html
+          num: 2
+        - title: 自建静态网站
+          path: ci/practice/static-website.html
+          num: 3
+        - title: 使用持续集成快速构建应用
+          num: 4
+          sections:
+            - title: GWT 应用
+              path: ci/practice/quick/java-gwt.html
+              num: 0
+            - title: 自动发布 Electron 应用
+              path: ci/practice/quick/auto-electron.html
+              num: 1
+            - title: 每日一句小应用
+              path: ci/practice/quick/daily-sentence.html
+              num: 2
+            - title: 自动化发布 AI 应用
+              path: ci/practice/quick/tensorflow.html
+              num: 3
+            - title: 自动构建微信小程序
+              path: ci/practice/quick/wechat-mini-program.html
+              num: 4         
+            - title: 使用 Flask 构建 Web 应用
+              path: ci/practice/quick/python-flask.html
+              num: 5
+            - title: 将 Ruby + 项目发布至腾讯云 TKE
+              path: ci/practice/quick/ruby-sinatra.html
+              num: 6
+            - title: 自动构建安卓应用
+              path: ci/practice/quick/java-android.html
+              num: 7
+            - title: 将 React 项目发布至腾讯云 COS
+              path: ci/practice/quick/react-cos.html
+              num: 8
+            - title: 将 Vue 项目发布至腾讯云 COS
+              path: ci/practice/quick/vue-cos.html
+              num: 9
+        - title: 代码规范检查
+          num: 5
+          sections:
+            - title: 增量检查
+              path: ci/practice/lint/code-diff.html
+              num: 0
+            - title: Commit Message
+              path: ci/practice/lint/git-commit.html
+              num: 1
+            - title: Java
+              path: ci/practice/lint/java.html
+              num: 2
+            - title: Markdown
+              path: ci/practice/lint/markdown.html
+              num: 3
+            - title: PHP
+              path: ci/practice/lint/php.html
+              num: 4
+            - title: Shell
+              path: ci/practice/lint/shell.html
+              num: 5
+        - title: 自动化测试
+          num: 6
+          sections:
+            - title: 功能介绍
+              path: ci/practice/testing/intro.html
+              num: 0
+            - title: Java Spring Boot
+              path: ci/practice/testing/java-spring-boot.html
+              num: 1
+            - title: PHP 自动化测试
+              path: ci/practice/testing/php.html
+              num: 2
+        - title: 自动部署
+          num: 7
+          sections:
+            - title:  COS 存储桶
+              path: ci/practice/deploy/cloud-storage.html
+              num: 0
+            - title:  Docker 服务器
+              path: ci/practice/deploy/docker.html
+              num: 1
+            - title:  K8s 集群
+              path: ci/practice/deploy/k8s.html
+              num: 2
+            - title:  Serverless
+              path: ci/practice/deploy/serverless.html
+              num: 3
+            - title:  Linux 服务器
+              path: ci/practice/deploy/ssh.html
+              num: 4
+            - title: 微信小程序
+              path: ci/practice/deploy/wechat-miniprogram.html
+              num: 5
+        - title: 同步代码库
+          num: 8
+          sections:
+            - title: 定时同步开源代码库
+              path: ci/practice/sync-from-github.html
+              num: 0
+            - title: 定时同步私有代码库
+              path: ci/practice/sync-private-repo.html
+              num: 1
+
+    - title: 常见问题
+      num: 11
+      links:
+        - title: Jenkinsfile 相关问题
+          path: ci/faq/jenkinsfile.html
+          num: 0
+        - title: 构建任务运行失败
+          path: ci/faq/job-fail.html
+          num: 1
+        - title: 自定义构建节点
+          path: ci/faq/customize-node.html
+          num: 2
+        - title: 持续集成与代码仓库
+          path: ci/faq/ci-repo.html
+          num: 3
+        - title: 持续集成与制品库
+          path: ci/faq/artifacts.html
+          num: 4
+        - title: 常见错误码
+          path: ci/faq/error-code.html
+          num: 5
+    - title: 词汇表
+      path: ci/glossary.html
+      num: 12
+      bold: 1
+
+- compendium: 制品管理
+  path: artifacts/
+  icon: images/book-icons/artifacts.svg
+  isHide: false
+  categories:
+    - title: 制品仓库
+      num: 0
+      links:
+        - title: 产品简介
+          path: artifacts/intro.html
+          num: 0
+        - title: 快速开始
+          num: 1
+          sections: 
+            - title: 基础操作
+              path: artifacts/quick-start/basic.html
+              num: 0
+            - title: Generic
+              path: artifacts/quick-start/generic.html
+              num: 1
+            - title: Docker
+              path: artifacts/quick-start/docker.html
+              num: 2
+            - title: Maven
+              path: artifacts/quick-start/maven.html
+              num: 3
+            - title: Npm
+              path: artifacts/quick-start/npm.html
+              num: 4
+            - title: Helm
+              path: artifacts/quick-start/helm.html
+              num: 5
+            - title: PyPI
+              path: artifacts/quick-start/pypi.html
+              num: 6
+            - title: Composer
+              path: artifacts/quick-start/composer.html
+              num: 7
+            - title: NuGet
+              path: artifacts/quick-start/nuget.html
+              num: 8
+            - title: Rpm
+              path: artifacts/quick-start/rpm.html
+              num: 9
+            - title: Conan
+              path: artifacts/quick-start/conan.html
+              num: 10
+            - title: Cocoapods
+              path: artifacts/quick-start/cocoapods.html
+              num: 11
+        - title: 制品库代理
+          path: artifacts/proxy.html
+          num: 2
+        - title: 制品库权限
+          path: artifacts/permission.html
+          num: 3
+        - title: 制品库认证
+          path: artifacts/auth.html
+          num: 4
+        - title: 制品属性
+          path: artifacts/properties.html
+          num: 5
+        - title: 制品版本覆盖策略
+          path: artifacts/version.html
+          num: 6
+        - title: 清理策略
+          path: artifacts/cleanup-strategy.html
+    - title: 制品扫描
+      num: 1
+      links:
+        - title: 产品简介
+          path: artifacts/scan/intro.html
+          num: 0
+        - title: 快速开始
+          path: artifacts/scan/projects.html
+          num: 1
+        - title: 扫描对象
+          path: artifacts/scan/demo.html
+          num: 2
+    - title: 自动化插件
+      num: 2
+      links:
+        - title: 推送到 CODING Docker 制品仓库
+          path: artifacts/practices/cci-push-docker.html
+          num:  0
+        - title: 制品属性设置
+          path: artifacts/practices/artifact-set-properties.html
+          num: 1
+    - title: 最佳实践
+      num: 3
+      links:
+        - title: 搭建团队级制品库
+          path: artifacts/practices/team-share.html
+          num: 0
+    - title: 常见问题
+      path: artifacts/faq.html
+      num: 4
+      bold: 1          
+    - title: 词汇表
+      path: artifacts/glossary.html
+      num: 5
+      bold: 1          
+
+- compendium: 持续部署
+  path: cd/
+  icon: images/book-icons/cd.svg
+  isHide: false
+  categories:
+    - title: 产品简介
+      path: cd/overview.html
+      num: 0
+    - title: 快速开始
+      path: cd/start.html
+      num: 1
+    - title: 权限控制
+      path: cd/rbac.html
+      num: 2
+    - title: 部署控制台
+      path: cd/console.html
+      num: 3
+    - title: 云账号
+      path: cd/cloud-account.html
+      num: 4
+    - title: 应用与项目
+      path: cd/app-project.html
+      num: 5
+
+    - title: 部署流程
+      num: 6
+      links:
+        - title: 部署流程介绍
+          path: cd/pipe/overview.html
+          num: 0
+        - title: 阶段类型
+          path: cd/pipe/stages.html
+          num: 1
+        - title: 触发器配置
+          path: cd/pipe/triggers.html
+          num: 2
+        - title: 环境变量
+          path: cd/pipe/env.html
+          num: 3
+
+    - title: 部署方式
+      num: 7
+      links:
+        - title: 自动发布 Docker 制品时触发
+          path: cd/deploy-way/docker.html
+          num: 0
+        - title: 在构建计划中添加部署阶段
+          path: cd/deploy-way/ci-job.html
+          num: 1
+        - title: 手动提交发布单
+          path: cd/deploy-way/manual.html
+          num: 2
+    - title: 制品
+      num: 8
+      links:
+        - title: 部署流程中的制品
+          path: cd/pipe/artifacts/in-pipelines.html
+          num: 0
+        - title: Kubernetes 场景下的制品
+          path: cd/pipe/artifacts/in-kubernetes.html
+          num: 1
+    - title: 阶段类型详情
+      num: 9
+      links:
+        - title: 人工确认
+          path: cd/pipe/stages/manual.html
+          num: 0
+        - title: Patch(Manifest) 阶段
+          path: cd/pipe/stages/patch.html
+          num: 1
+        - title: Run Job(Manifest) 阶段
+          path: cd/pipe/stages/runjob.html
+          num: 2
+        - title: Bake(Manifest) 阶段
+          path: cd/pipe/stages/bake.html
+          num: 3
+        - title: Deploy(Manifest) 阶段
+          path: cd/pipe/stages/deploy.html
+          num: 4
+    - title: 主机部署
+      num: 10
+      links:
+        - title: 主机部署介绍
+          path: cd/host-deploy/intro.html
+          num: 0
+        - title: 堡垒机
+          path: cd/host-deploy/bastion-host.html
+          num: 1
+        - title: 主机组
+          path: cd/host-deploy/host-group.html
+          num: 2
+        - title: 堡垒机 Agent
+          path: cd/host-deploy/cloud-agent.html
+          num: 3
+        - title: 部署阶段配置
+          path: cd/host-deploy/stage.html
+          num: 4
+        - title: 运行脚本阶段
+          path: cd/host-deploy/script.html
+          num: 5
+        - title: 查看部署详情
+          path: cd/host-deploy/details.html
+          num: 6
+        - title: 回滚
+          path: cd/host-deploy/rollback.html
+          num: 7
+    - title: 最佳实践
+      num: 11
+      links:
+        - title: Kubernetes 滚动发布实践
+          path: cd/best-practice/rolling-release.html
+          num: 0
+        - title: Kubernetes 蓝绿部署实践
+          path: cd/best-practice/blue-green.html
+          num: 1
+        - title: 在 Kubernetes 上持续部署 Helm 应用
+          path: cd/best-practice/k8s-helm.html
+          num: 2
+        - title: Nginx ingress 实现自动化灰度发布
+          path: cd/best-practice/nginx-ingress.html
+          num: 3
+        - title: 持续部署 + TKE Mesh 灰度发布实践
+          path: cd/best-practice/tke-mesh.html
+          num: 4
+        - title: 使用 Serverless 实现动态准入控制
+          path: cd/best-practice/k8s-serverless.html
+          num: 5
+        - title: 基于腾讯云弹性伸缩（AS）的持续部署
+          path: cd/best-practice/cvm-cd.html
+          num: 6
+#        - title: CODING CD 主机组部署实践
+#          path: cd/best-practice/host-group.html
+#          num: 7
+        - title: 使用 CODING 持续部署的强大表达式
+          path:  cd/best-practice/expression-cd.html
+          num: 7
+
+    - title: 常见问题
+      num: 12
+      links:
+        - title: 部署 Kubernetes 资源时拉取私有库镜像
+          path: cd/question/private-repo.html
+          num: 0
+        - title: Kubernetes 云账号的最小权限要求
+          path: cd/question/min-authority.html
+          num: 1
+        - title: 如何将 Kubeconfig 中的证书文件转为证书数据
+          path: cd/question/convert-certfile-to-certdata.html
+          num: 2
+        - title: 云账号相关问题
+          path: cd/question/cloud-account.html
+          num: 3
+        - title: 部署 K8s 时相关问题
+          path: cd/question/deploy-k8s.html
+          num: 4
+          last: true
+
+- compendium: 文档管理
+  path: document/
+  icon: images/book-icons/wiki.svg
+  isHide: false
+  categories:
+    - title: 知识管理
+      num: 0
+      links:
+        - title: 产品简介
+          path: document/knowledge/intro.html
+          num: 0    
+        - title: 创建知识空间
+          path: document/knowledge/start.html
+          num: 1
+        - title: 管理知识空间
+          path: document/knowledge/manage.html
+          num: 2
+        - title: 访问权限
+          path: document/knowledge/permission.html   
+          num: 3       
+    - title: Wiki
+      num: 1
+      links:
+        - title: 产品简介
+          path: document/wiki/intro.html
+          num: 0
+        - title: 快速开始
+          path: document/wiki/start.html
+          num: 1
+        - title: 权限配置
+          path: document/wiki/permission.html
+          num: 2        
+        - title: Markdown 语法参考
+          path: document/wiki/markdown.html
+          num: 3
+    - title: 文件网盘
+      num: 2
+      links:
+        - title: 产品简介
+          path: document/files/intro.html
+          num: 0
+        - title: 快速开始
+          path: document/files/start.html
+          num: 1
+        - title: 权限配置
+          path: document/files/permission.html
+          num: 2
+
+    - title: API 文档管理
+      num: 3
+      links:
+        - title: 快速开始
+          path: document/api/start.html
+          num: 0
+        - title: 配置说明
+          path: document/api/config.html
+          num: 1
+        - title: 接入自动化工具
+          path: document/api/automation.html
+          num: 2
+        - title: 编写与导入
+          num: 3
+          sections:
+            - title: OpenAPI/Swagger
+              path: document/api/import/openapi.html
+              num: 0
+            - title: Postman
+              path: document/api/import/postman.html
+              num: 1
+            - title: apiDoc
+              path: document/api/import/apidoc.html
+              num: 2
+        - title: Mock API
+          num: 4
+          sections:
+            - title: 功能介绍
+              path: document/api/mock/intro.html
+              num: 0
+            - title: 使用流程
+              path: document/api/mock/usage.html
+              num: 1
+            - title: 调用说明
+              path: document/api/mock/call.html
+              num: 2
+              last: true
+
+- compendium: Compass
+  path: compass/
+  icon: images/book-icons/compass.svg
+  isHide: true
+  categories:
+    - title: 产品简介
+      path: compass/intro.html
+      num: 0
+    - title: 工作流
+      num: 1
+      links:
+        - title: 功能介绍
+          path: compass/workflow/intro.html
+          num: 0
+        - title: 快速开始
+          path: compass/workflow/start.html
+          num: 1
+        - title: 耗时统计
+          path: compass/workflow/time-measure.html
+          num: 2
+    - title: 规范
+      path: compass/policy.html
+      num: 2
+    - title: 自动化
+      path: compass/automation.html
+      num: 3
+    - title: 词汇表
+      path: compass/glossary.html
+      num: 4
+      bold: 1
+  
+- compendium: 个人管理
+  path: member/
+  icon: images/book-icons/webhook.svg
+  isHide: false
+  categories:
+    - title: 个人设置概览
+      path: member/introduce.html
+      num: 0
+    - title: 个人工作台
+      path: member/workbench.html
+      num: 1
+    - title: 个人账户管理
+      num: 2
+      links:
+        - title: 个人账户设置
+          path: member/personal-account/settings.html
+          num: 0
+        - title: 两步验证介绍
+          path: member/personal-account/authenticator.html
+          num: 1
+        - title: 账号合并指引
+          path: member/personal-account/account-merger.html
+          num: 2
+        - title: 登录常见问题
+          path: member/personal-account/login-faq.html
+          num: 3 
+    - title: 个人访问令牌
+      path: member/tokens.html
+      num: 3
+
+- compendium: 团队管理员指南
+  path: admin/
+  icon: images/book-icons/members.svg
+  isHide: false
+  categories:
+    - title: 团队配置
+      path: admin/team.html
+      num: 0
+    - title: 项目管理
+      path: admin/project.html
+      num: 1
+    - title: 成员管理
+      num: 2
+      links:
+        - title: 管理团队成员
+          path: admin/member/members.html
+          num: 0
+        - title: 管理组织架构
+          path: admin/member/organization.html
+          num: 1
+        - title: 管理组织架构成员
+          path: admin/member/members-organization.html
+          num: 2    
+        - title: 通过企业微信导入成员
+          path: admin/member/wecom.html
+          num: 3 
+        - title: 通过腾讯云导入成员
+          path: admin/member/cloud.html
+          num: 4
+        - title: 通过 LDAP 导入成员
+          path: admin/member/ldap.html
+          num: 5
+        - title: 通过 TCTP 导入成员
+          path: admin/member/tctp.html        
+          num: 6  
+    - title: 权限配置
+      path: admin/permission.html
+      num: 3
+    - title: 第三方应用
+      num: 4
+      links:
+        - title: 绑定腾讯云
+          path: admin/service-integration/cloud.html
+          num: 0
+        - title: 绑定企业微信
+          path: admin/service-integration/wecom.html
+          num: 1
+        - title: 绑定企业微信小程序
+          path: admin/service-integration/applets.html
+          num: 2
+        - title: 绑定私有 GitLab
+          path: admin/service-integration/gitlab.html
+          num: 3
+        - title: 绑定 LDAP
+          path: admin/service-integration/ldap.html
+          num: 4
+        - title: 绑定 TCTP
+          path: admin/service-integration/tctp.html
+          num: 5
+#        - title: 绑定飞书
+#          path: admin/service-integration/feishu.html
+    - title: 安全性
+      num: 5
+      links:
+        - title: 访问审计
+          path: admin/access-audit.html
+          num: 0
+        - title: 登录设置
+          path: admin/login.html
+          num: 1
+        - title: 水印设置
+          path: admin/watermark.html
+          num: 2
+        - title: 日志
+          path: admin/security-log.html
+          num: 3
+
+    - title: 服务订购
+      num: 6
+      links:
+        - title: 服务方案与计费
+          path: admin/pay/price.html
+          num: 0
+        - title: 账单、合同与发票
+          path: admin/pay/invoice.html 
+          num: 1         
+        - title: 常见问题
+          path: admin/pay/faq.html
+          num: 2
+    - title: 消息通知
+      num: 7
+      links:
+        - title: 站内通知
+          path: admin/message/in-site.html
+          num: 0
+        - title: 每日邮件提醒
+          path: admin/message/daily.html
+          num: 1
+        - title: 第三方服务通知
+          num: 2
+          sections:
+            - title: 微信
+              path: admin/message/third-party/wechat.html
+              num: 0
+            - title: 企业微信
+              path: admin/message/third-party/wecom.html
+              num: 1
+            - title: 企业微信群机器人
+              path: admin/message/third-party/wecom-robot.html
+              num: 2
+            - title: 钉钉机器人
+              path: admin/message/third-party/dingtalk.html 
+              num: 3
+    - title: 常见问题
+      path: admin/faq.html
+      num: 1
+      bold: 1
+      last: true
+
+- compendium: 项目管理员指南
+  path: project-settings/
+  icon: images/book-icons/project.svg
+  isHide: false
+  categories:
+    - title: 项目管理
+      path: project-settings/project.html
+      num: 0
+    - title: 项目成员管理
+      path: project-settings/members.html
+      num: 1
+    - title: 权限配置
+      path: project-settings/permission.html  
+      num: 2
+    - title: 基本设置
+      path: project-settings/basic.html
+      num: 3
+    - title: 高级设置
+      num: 4
+      links:
+        - title: 项目令牌
+          path: project-settings/deploy-tokens.html
+          num: 0
+        - title: 凭据管理
+          path: project-settings/credential.html
+          num: 1
+        - title: Service Hook
+          num: 2
+          sections:
+            - title: 产品简介
+              path: project-settings/service-hook/intro.html
+              num: 0
+            - title: 服务类型
+              path: project-settings/service-hook/service.html
+              num: 1
+            - title: 事件介绍
+              path: project-settings/service-hook/event.html      
+              num: 2        
+            - title: 过滤器
+              path: project-settings/service-hook/filter.html
+              num: 3
+            - title: 绑定企业微信群机器人
+              path: project-settings/service-hook/wecom-robot.html
+              num: 4
+            - title: 绑定钉钉机器人
+              path: project-settings/service-hook/dingtalk-robot.html
+              num: 5
+              last: true
+
+- compendium: 项目集
+  path: project-set/
+  icon: images/book-icons/program.svg
+  isHide: false
+  categories:
+    - title: 产品简介
+      path:  project-set/intro.html
+      num: 0
+    - title: 快速开始
+      path:  project-set/start.html
+      num: 1
+    - title: 项目集管理
+      path: project-set/manage.html
+      num: 2
+    - title: 成员与权限管理
+      path:  project-set/members.html
+      num: 3
+    - title: 常见问题
+      path: project-set/faq.html
+      num: 4
+
+
+- compendium: 仪表盘
+  path: dashboard/
+  icon: images/book-icons/dashboard.svg
+  isHide: false
+  categories:
+    - title: 使用仪表盘
+      path:  dashboard/use.html
+      num: 0
+    - title: 最佳实践
+      path: dashboard/best-practice.html
+      num: 1
+
+- compendium: 团队目标管理
+  path: okr/
+  icon: images/book-icons/okr.svg
+  isHide: false
+  categories:
+    - title: 快速开始
+      path: okr/okr.html
+      num: 0
+    - title: 最佳实践
+      path: okr/best-practices.html
+      num: 1
+    - title: 词汇表
+      path: okr/glossary.html
+      num: 2
+      bold: 1
+
+- compendium: 工作负载
+  path: workload/
+  icon: images/book-icons/workload.svg
+  isHide: false
+  categories:
+    - title: 产品简介
+      path: workload/intro.html
+      num: 0
+    - title: 快速开始
+      path: workload/start.html
+      num: 1
+    - title: 权限配置
+      path: workload/permission.html
+      num: 2
+
+
+- compendium: 研发度量
+  path: metric/
+  icon: images/book-icons/metric.svg
+  isHide: false
+  categories:
+    - title: 使用研发度量
+      path: metric/intro.html
+      num: 0
+
+- compendium: OPEN API
+  path: open/
+  icon: images/book-icons/open-api.svg
+  isHide: false
+  categories:
+    - title: 授权认证
+      path: open/start.html
+      num: 0
+    
+- compendium: 网站托管
+  path: pages/
+  icon: images/book-icons/api-doc.svg
+  isHide: true
+  categories:
+    - title: 产品简介
+      path: pages/intro.html
+      num: 0
+    - title: 管理指引
+      path: pages/operating.html
+      num: 1
+    - title: 计费说明
+      path: pages/price.html
+      num: 2
+
+- compendium: 流水线
+  path: qci/
+  icon: images/book-icons/ci.svg
+  isHide: true
+  categories:
+    - title: 产品简介
+      path: qci/intro.html
+      num: 0
+    - title: 产品优势
+      path: qci/advantage.html
+      num: 1
+    - title: 快速开始
+      path: qci/intro/quick-start.html
+      num: 2
+    - title: 配置流水线
+      path: qci/pipeline/intro.html
+      num: 3
+      links: 
+        - title: 触发方式
+          path: qci/pipeline/trigger.html
+          num: 0
+        - title: 分支监控
+          path: qci/pipeline/trigger.html
+          num: 1
+        - title: 重新运行
+          path: qci/pipeline/trigger.html
+          num: 2
+        - title: 自动取消机制
+          path: qci/pipeline/trigger.html
+          num: 3
+        - title: 自定义版本号
+          path: qci/pipeline/trigger.html
+          num: 4
+        - title: 自动禁用
+          path: qci/pipeline/trigger.html
+          num: 5
+    - title: CIFile 文件
+      path: qci/cifile/intro.html
+      num: 4
+      links: 
+        - title: 示例文件参考
+          path: qci/cifile/intro.html
+          num: 0
+        - title: 编写任务与阶段划分
+          path: qci/cifile/task-stage.html
+          num: 1     
+        - title: 代码仓库拉取配置
+          path: qci/cifile/trigger.html
+          num: 2
+        - title: 配置触发方式
+          path: qci/cifile/trigger.html
+          num: 3
+        - title: 通知及其他配置
+          path: qci/cifile/trigger.html
+          num: 4
+        - title: 文件路径配置格式
+          path: qci/cifile/stage-task/path-format.html
+          num: 5
+        - title: 人工确认
+          path: qci/cifile/stage-task/prompt.html
+          num: 6
+        - title: 收尾阶段
+          path: qci/cifile/stage-task/finally.html
+          num: 7
+    - title: 查看构建结果
+      path: qci/pipeline/intro.html
+      num: 5
+      links: 
+        - title: 个性化结果展示
+          path: qci/pipeline/trigger.html
+          num: 0
+        - title: 结果徽章
+          path: qci/pipeline/trigger.html
+          num: 1
+        - title: 结果通知
+          path: qci/pipeline/trigger.html
+          num: 2
+    - title: 环境变量
+      path: qci/pipeline/intro.html
+      num: 6
+      links: 
+        - title: 变量分类与使用
+          path: qci/pipeline/trigger.html
+          num: 0
+        - title: 变量分类与使用
+          path: qci/pipeline/trigger.html
+          num: 1
+    - title: 编译环境
+      path: qci/node-env
+      num: 7
+      links: 
+        - title: 如何修改构建机环境
+          path: qci/node-env/how-to-change.html
+          num: 0
+        - title: 定制 Docker 编译镜像
+          path: qci/node-env/docker-customize.html
+          num: 1  
+    - title: 错误码速查表
+      path: qci/error-code.html
+      num: 8
+    - title: 词汇表
+      path: qci/glossary.html
+      num: 9
+      bold: 1
+
+- compendium: 应用中心（Orbit）
+  path:  orbit/
+  icon: images/book-icons/ci.svg
+  isHide: true
+  categories:
+    - title: 产品简介
+      path: orbit/intro.html
+      num: 0
+    - title: 快速开始
+      path: orbit/start.html
+      num: 1
+    - title: 权限配置
+      path: orbit/permission.html
+      num: 2
+    - title: 应用详情
+      path: orbit/detail/basic.html
+      num: 3
+#    - title: 应用详情
+#      path: orbit/detail
+#      links: 
+#        - title: 基础信息
+#          path: orbit/detail/basic.html
+
+- compendium: Cloud Studio
+  path:  cs/
+  icon: images/book-icons/code.svg
+  isHide: false
+  categories:
+    - title: 产品简介
+      path: cs/intro.html
+      num: 0
+
+#- compendium: 项目协同
+#  path: collaboration/
+#  icon: images/book-icons/agile.svg
+#  isHide: false
+#  categories:
+#    - title: 产品简介
+#      path: collaboration/intro.html
+#    - title: Scrum 敏捷项目管理
+#      links:
+#        - title: 模式介绍
+#          path: collaboration/pattern/scrum/intro.html
+#        - title: 编写构建流程
+#          sections:
+#            - title: 文本编辑器
+#              path: ci/process/text.html          

@@ -8,40 +8,255 @@ block main
             block content
                 div.helpContent
                     article.helpArticle.markdown-body 
-                        h1= page.pageTitle
+                        != breadcrumb(site.data.navigation, page.path)
+                        h1#pageTitle= page.pageTitle
+                        .helpTOC.helpTOCArticle
+                            .helpTOCTitle 文章内容
+                            != toc(page.content, {max_depth: 3, list_number: false})
                         .helpArticleLine
-                        != page.content
-                    aside.helpTOC.helpTOCRight
-                        .helpTOCTitle 文章内容
-                        != toc(page.content, {max_depth: 2, list_number: false})
-                if page.pagePrev || page.pageNext
-                    .post-nav-area
-                        .post-nav
-                            if page.pagePrev
-                                a.pre(href=`${config.root || ''}${page.pagePrev}`, class={isOnly: !page.pageNext})
-                                    span.arrowLeft
-                                    span.postPrev
-                                        span 上一篇
-                                        span.title= page.pagePrevTitle
-                            if page.pageNext
-                                a.next(href=`${config.root || ''}${page.pageNext}`, class={isOnly: !page.pagePrev})
-                                    span.postNext
-                                        span 下一篇
-                                        span.title= page.pageNextTitle
-                                    span.arrowRight
-                .pageFeedbackArea
-                    .pageFeedback
-                        .fd-left 文档是否对您有用？
-                        .fd-right 
-                            .fd-btn.good
-                                span.icon.isActive
-                                    span.like
-                                    span.tooltips 感谢反馈
-                                span.isActive 有用
-                            .fd-btn.bad
-                                span.icon.disable
-                                    span.dislike
-                                    span.tooltips 感谢反馈
-                                span.disable 没用
+                        != page_anchor(page.content)
+                        div#READNUM.readNum
+                        div#TableModal.tableModal
+                            svg#ModalClose.modalClose(fill='#fff', preserveAspectRatio='xMidYMid meet', height='40px' , width='40px',  viewBox='0 0 18 18' , style='vertical-align: middle;')
+                                g
+                                    path#ModalClosePath(d='m14.1085786 4.66607864-.7746572-.77465729c-.0781049-.07810486-.2047379-.07810486-.2828428 0l-4.0510786 4.05107865-4.05107865-4.05107865c-.07810486-.07810486-.20473785-.07810486-.28284271 0l-.77465729.77465729c-.07810486.07810486-.07810486.20473785 0 .28284271l4.05107865 4.05107865-4.05107865 4.0510786c-.07810486.0781049-.07810486.2047379 0 .2828428l.77465729.7746572c.07810486.0781049.20473785.0781049.28284271 0l4.05107865-4.0510786 4.0510786 4.0510786c.0781049.0781049.2047379.0781049.2828428 0l.7746572-.7746572c.0781049-.0781049.0781049-.2047379 0-.2828428l-4.0510786-4.0510786 4.0510786-4.05107865c.0781049-.07810486.0781049-.20473785 0-.28284271z')
+                            div#TableModalContent.tableModalContent
+                        if page.title
+                            - const {index, sitemap} = site.data.navigation
+                              each book in sitemap 
+                                each item in book.categories
+                                    - const currentAddress = page.source.split('.')[0] + '.html'
+                                    - const pathAddress = item.path
+                                    - if (pathAddress && pathAddress === currentAddress)
+                                        .post-nav-area
+                                            .post-nav
+                                                if item.num > 0
+                                                    if book.categories[item.num - 1].path
+                                                        a.pre(href=`${config.root || ''}${book.categories[item.num - 1].path}`, class={isOnly: !page.pageNext})
+                                                            span.arrowLeft
+                                                            span.postPrev
+                                                                span 上一篇
+                                                                span.title= book.categories[item.num - 1].title
+                                                    else
+                                                        if book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].path
+                                                            a.pre(href=`${config.root || ''}${book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].path}`, class={isOnly: !page.pageNext})
+                                                                span.arrowLeft
+                                                                span.postPrev
+                                                                    span 上一篇
+                                                                    span.title= book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].title
+                                                        else
+                                                            a.pre(href=`${config.root || ''}${book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].sections[book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].sections.length - 1].path}`, class={isOnly: !page.pageNext})
+                                                                span.arrowLeft
+                                                                span.postPrev
+                                                                    span 上一篇
+                                                                    span.title= book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].sections[book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].sections.length - 1].title
+                                                if item.num < book.categories.length - 1
+                                                    if book.categories[item.num + 1].path
+                                                        a.next(href=`${config.root || ''}${book.categories[item.num + 1].path}`, class={isOnly: !page.pagePrev})
+                                                            span.postNext
+                                                                span 下一篇
+                                                                span.title= book.categories[item.num + 1].title
+                                                            span.arrowRight
+                                                    else 
+                                                        if book.categories[item.num + 1].links
+                                                            a.next(href=`${config.root || ''}${book.categories[item.num + 1].links[0].path}`, class={isOnly: !page.pagePrev})
+                                                                span.postNext
+                                                                    span 下一篇
+                                                                    span.title= book.categories[item.num + 1].links[0].title
+                                                                span.arrowRight
+                                                        else 
+                                                            a.next(href=`${config.root || ''}${book.categories[item.num + 1].links[0].sections[0].path}`, class={isOnly: !page.pagePrev})
+                                                                span.postNext
+                                                                    span 下一篇
+                                                                    span.title= book.categories[item.num + 1].links[0].sections[0].title
+                                                                span.arrowRight
+                                                    
+                                    - else 
+                                        if item.links
+                                            each data in item.links
+                                                - const pathLinkAddress = data.path
+                                                - if (pathLinkAddress === currentAddress)
+                                                    .post-nav-area
+                                                        .post-nav
+                                                            if data.num === 0
+                                                                if item.num > 0
+                                                                    if book.categories[item.num - 1].links
+                                                                        if book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].path
+                                                                            a.pre(href=`${config.root || ''}${book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].path}`, class={isOnly: !page.pageNext})
+                                                                                span.arrowLeft
+                                                                                span.postPrev
+                                                                                    span 上一篇
+                                                                                    span.title= book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].title
+                                                                        else 
+                                                                            a.pre(href=`${config.root || ''}${book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].sections[book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].sections.length - 1].path}`, class={isOnly: !page.pageNext})
+                                                                                span.arrowLeft
+                                                                                span.postPrev
+                                                                                    span 上一篇
+                                                                                    span.title= book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].sections[book.categories[item.num - 1].links[book.categories[item.num - 1].links.length - 1].sections.length - 1].title
+                                                                    else
+                                                                        a.pre(href=`${config.root || ''}${book.categories[item.num - 1].path}`, class={isOnly: !page.pageNext})
+                                                                            span.arrowLeft
+                                                                            span.postPrev
+                                                                                span 上一篇
+                                                                                span.title= book.categories[item.num - 1].title
+                                                            else if data.num > 0
+                                                                if item.links[data.num - 1].path
+                                                                    a.pre(href=`${config.root || ''}${item.links[data.num - 1].path}`, class={isOnly: !page.pageNext})
+                                                                        span.arrowLeft
+                                                                        span.postPrev
+                                                                            span 上一篇
+                                                                            span.title= item.links[data.num - 1].title
+                                                                else 
+                                                                    if item.links[data.num - 1].sections
+                                                                        a.pre(href=`${config.root || ''}${item.links[data.num - 1].sections[item.links[data.num - 1].sections.length-1].path}`, class={isOnly: !page.pageNext})
+                                                                            span.arrowLeft
+                                                                            span.postPrev
+                                                                                span 上一篇
+                                                                                span.title= item.links[data.num - 1].sections[item.links[data.num - 1].sections.length-1].title
+                                                            if data.num < item.links.length - 1
+                                                                if item.links[data.num + 1].path
+                                                                    a.next(href=`${config.root || ''}${item.links[data.num + 1].path}`, class={isOnly: !page.pagePrev})
+                                                                        span.postNext
+                                                                            span 下一篇
+                                                                            span.title= item.links[data.num + 1].title
+                                                                        span.arrowRight
+                                                                else 
+                                                                    a.next(href=`${config.root || ''}${item.links[data.num + 1].sections[0].path}`, class={isOnly: !page.pagePrev})
+                                                                        span.postNext
+                                                                            span 下一篇
+                                                                            span.title= item.links[data.num + 1].sections[0].title
+                                                                        span.arrowRight
+                                                            if data.num === item.links.length - 1
+                                                                if !data.last
+                                                                    if book.categories[item.num + 1].path
+                                                                        a.next(href=`${config.root || ''}${book.categories[item.num + 1].path}`, class={isOnly: !page.pagePrev})
+                                                                            span.postNext
+                                                                                span 下一篇
+                                                                                span.title= book.categories[item.num + 1].title
+                                                                            span.arrowRight
+                                                                    else 
+                                                                        if book.categories[item.num + 1].links[0].path
+                                                                            a.next(href=`${config.root || ''}${book.categories[item.num + 1].links[0].path}`, class={isOnly: !page.pagePrev})
+                                                                                span.postNext
+                                                                                    span 下一篇
+                                                                                    span.title= book.categories[item.num + 1].links[0].title
+                                                                                span.arrowRight
+                                                - else 
+                                                    if data.sections
+                                                        each section in data.sections
+                                                            - const pathSectionAddress = section.path
+                                                            - if (pathSectionAddress === currentAddress)
+                                                                .post-nav-area
+                                                                    .post-nav
+                                                                        if section.num === 0
+                                                                            if data.num > 0
+                                                                                if item.links[data.num - 1].sections
+                                                                                    a.pre(href=`${config.root || ''}${item.links[data.num - 1].sections[item.links[data.num - 1].sections.length -1].path}`, class={isOnly: !page.pageNext})
+                                                                                        span.arrowLeft
+                                                                                        span.postPrev
+                                                                                            span 上一篇
+                                                                                            span.title= item.links[data.num - 1].sections[item.links[data.num - 1].sections.length -1].title
+                                                                                else
+                                                                                    a.pre(href=`${config.root || ''}${item.links[data.num - 1].path}`, class={isOnly: !page.pageNext})
+                                                                                        span.arrowLeft
+                                                                                        span.postPrev
+                                                                                            span 上一篇
+                                                                                            span.title= item.links[data.num - 1].title
+                                                                        else if section.num > 0
+                                                                            a.pre(href=`${config.root || ''}${data.sections[section.num - 1].path}`, class={isOnly: !page.pageNext})
+                                                                                span.arrowLeft
+                                                                                span.postPrev
+                                                                                    span 上一篇
+                                                                                    span.title= data.sections[section.num - 1].title
+                                                                        if section.num < data.sections.length - 1
+                                                                            a.next(href=`${config.root || ''}${data.sections[section.num + 1].path}`, class={isOnly: !page.pagePrev})
+                                                                                span.postNext
+                                                                                    span 下一篇
+                                                                                    span.title= data.sections[section.num + 1].title
+                                                                                span.arrowRight
+                                                                        else if section.num === data.sections.length - 1
+                                                                            if !section.last
+                                                                                if item.links[data.num + 1]
+                                                                                    if item.links[data.num + 1].sections
+                                                                                        a.next(href=`${config.root || ''}${item.links[data.num + 1].sections[0].path}`, class={isOnly: !page.pageNext})
+                                                                                            span.postNext
+                                                                                                span 下一篇
+                                                                                                span.title= item.links[data.num + 1].sections[0].title
+                                                                                            span.arrowRight
+                                                                                    else
+                                                                                        if item.links[data.num + 1].path
+                                                                                            a.next(href=`${config.root || ''}${item.links[data.num + 1].path}`, class={isOnly: !page.pageNext})
+                                                                                                span.postNext
+                                                                                                    span 下一篇
+                                                                                                    span.title= item.links[data.num + 1].title
+                                                                                                span.arrowRight
+                                                                                else 
+                                                                                    if book.categories[item.num + 1].links && book.categories[item.num + 1].links[0].path
+                                                                                        a.next(href=`${config.root || ''}${book.categories[item.num + 1].links[0].path}`, class={isOnly: !page.pageNext})
+                                                                                            span.postNext
+                                                                                                span 下一篇
+                                                                                                span.title= book.categories[item.num + 1].links[0].title
+                                                                                            span.arrowRight
+                            
+                        .pageFeedbackArea
+                            .pageFeedback
+                                .updateTime
+                                    img.updateAvatar(src='https://assets.codehub.cn/resources/logo3-png.png')
+                                    span#RecentUpdate 最近更新
+                                .fd-right 
+                                    .fd-btn.good
+                                        span.icon
+                                            span.like#helpdocGoodBtn
+                                            span.tooltips 感谢反馈
+                                        span 有用
+                                    .fd-btn.bad
+                                        span.icon
+                                            span.dislike#helpdocBadBtn
+                                            span.tooltips 感谢反馈
+                                        span 没用
+                            .bad-modal
+                                p.title 在阅读中是否遇到以下问题？
+                                .radio-list
+                                    .item
+                                        input.radio(type="radio", name="radio", value="CONTENT_NOT_FOUND", checked)
+                                        label.radio-label 内容找不到
+                                    .item
+                                        input.radio(type="radio", name="radio", value="CONTENT_NOT_UPDATE")
+                                        label.radio-label 内容没更新
+                                    .item
+                                        input.radio(type="radio", name="radio", value="UNCLEAR_DESCRIPTION")
+                                        label.radio-label 描述不清楚
+                                    .item
+                                        input.radio(type="radio", name="radio", value="URL_ERROR")
+                                        label.radio-label 链接有错误
+                                    .item
+                                        input.radio(type="radio", name="radio", value="INCOMPLETE_STEPS")
+                                        label.radio-label 步骤不完整
+                                    .item
+                                        input.radio(type="radio", name="radio", value="MISSING_CODE_OR_IMAGE")
+                                        label.radio-label 代码或图片缺失
+                                p.title.padding-height 您希望我们如何改进？
+                                textarea.txt-area(name="feedback", cols="30", rows="5", placeholder="请留下您的宝贵意见...")
+                                .btn-box
+                                    button.btn 提交
+                                    button.cancel-btn 取消 
+                        code.hljs.none
+                    .pageRight
+                        aside.helpTOC.helpTOCRight
+                            .helpTOCTitle 文章内容
+                            != toc(page.content, {max_depth: 4, list_number: false})
+    .helpMenuSwitch
+        .menuIcon
+    .helpMask
+    .cuk-alert.cuk-alert-success
+        svg.cuk-icon.cuk-icon-check-circle.cuk-alert-icon(fill='currentColor', preserveAspectRatio='xMidYMid meet', height='1em', width='1em', viewBox='0 0 40 40', style='vertical-align: middle;')
+            g
+            path(d='m31.7 16.4q0-0.6-0.4-1l-2.1-2.1q-0.4-0.4-1-0.4t-1 0.4l-9.1 9.1-5-5q-0.5-0.4-1-0.4t-1 0.4l-2.1 2q-0.4 0.4-0.4 1 0 0.6 0.4 1l8.1 8.1q0.4 0.4 1 0.4 0.6 0 1-0.4l12.2-12.1q0.4-0.4 0.4-1z m5.6 3.6q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z')
+        span.txt
+    .cuk-alert.cuk-alert-danger
+        svg.cuk-icon.cuk-icon-times-circle.cuk-alert-icon(fill='currentColor', preserveAspectRatio='xMidYMid meet', height='1em', width='1em', viewBox='0 0 40 40', style='vertical-align: middle;')
+            g
+            path(d='m28.6 25q0-0.5-0.4-1l-4-4 4-4q0.4-0.5 0.4-1 0-0.6-0.4-1.1l-2-2q-0.4-0.4-1-0.4-0.6 0-1 0.4l-4.1 4.1-4-4.1q-0.4-0.4-1-0.4-0.6 0-1 0.4l-2 2q-0.5 0.5-0.5 1.1 0 0.5 0.5 1l4 4-4 4q-0.5 0.5-0.5 1 0 0.7 0.5 1.1l2 2q0.4 0.4 1 0.4 0.6 0 1-0.4l4-4.1 4.1 4.1q0.4 0.4 1 0.4 0.6 0 1-0.4l2-2q0.4-0.4 0.4-1z m8.7-5q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z')
+        span.txt
 
                     

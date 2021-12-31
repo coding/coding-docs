@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git diff --diff-filter=d --name-only HEAD | grep ".md$" | xargs npx remark -f
+git diff --diff-filter=d --name-only HEAD | grep ".md$" | xargs npx lint-md
+npx fnlint -c .fnlint.json

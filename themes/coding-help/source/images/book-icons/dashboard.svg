@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>dashboard</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dashboard">
+            <rect id="Rectangle" fill="#5F68FC" x="0" y="0" width="24" height="24"></rect>
+            <g id="Shape" fill="#FFFFFF">
+                <path d="M12,4 C7.6,4 4,7.6 4,12 C4,16.4 7.6,20 12,20 C16.4,20 20,16.4 20,12 C20,7.6 16.4,4 12,4 Z M8,13 L6,13 L6,11 L8,11 L8,13 Z M13,18 L11,18 L11,16 L13,16 L13,18 Z M12.1132075,14 C11.0754717,14 10.2264151,13.1369863 10.2264151,12.0821918 C10.2264151,11.6986301 10.3207547,11.3150685 10.509434,11.0273973 L9,7.8630137 L10.6981132,7 L12.2075472,10.1643836 C13.1509434,10.260274 14,11.0273973 14,12.0821918 C14,13.1369863 13.1509434,14 12.1132075,14 Z M18,13 L16,13 L16,11 L18,11 L18,13 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

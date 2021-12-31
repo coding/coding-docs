@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>testing</title>
+    <g id="Support-|-Article" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1105.000000, -418.000000)">
+            <g id="dropdown-copy-4" transform="translate(1097.000000, 78.000000)">
+                <g id="row" transform="translate(0.000000, 332.000000)">
+                    <g id="testing" transform="translate(8.000000, 8.000000)">
+                        <rect id="Rectangle" fill="#7ACC29" x="0" y="0" width="24" height="24"></rect>
+                        <g id="Group" fill="#FFFFFF" fill-rule="nonzero">
+                            <g id="book-icons/agile">
+                                <path d="M17.5037037,16.1125 L13.7186496,11.65 L13.7186496,9.5 L10.197669,9.5 L10.197669,11.65 L6.41261491,16.1125 C5.97249234,16.6375 5.88446782,17.3375 6.14854137,17.95 C6.41261491,18.5625 7.02878651,19 7.73298263,19 L16.2713605,19 C16.9755566,19 17.5917282,18.65 17.8558018,17.95 C18.1198753,17.3375 18.0318508,16.6375 17.5037037,16.1125 Z" id="Path"></path>
+                                <path d="M13.7186496,8.5 L14.5988947,8.5 C15.1270418,8.5 15.4791399,8.15 15.4791399,7.625 L15.4791399,5.875 C15.4791399,5.35 15.1270418,5 14.5988947,5 L9.31742388,5 C8.7892768,5 8.43717874,5.35 8.43717874,5.875 L8.43717874,7.625 C8.43717874,8.15 8.7892768,8.5 9.31742388,8.5 L10.197669,8.5 L13.7186496,8.5 Z" id="Path-Copy" opacity="0.600000024"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

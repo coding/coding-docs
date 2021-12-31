@@ -1,0 +1,6 @@
+{
+  "basePath": ".",
+  "files": "source/**/*.md",
+  "format": "kebabcase",
+  "directories": true
+}

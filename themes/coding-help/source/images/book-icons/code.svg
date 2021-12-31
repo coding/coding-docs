@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>code</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Support-|-Article" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1105.000000, -258.000000)">
+            <g id="dropdown-copy-4" transform="translate(1097.000000, 78.000000)">
+                <g id="row" transform="translate(0.000000, 172.000000)">
+                    <g id="code" transform="translate(8.000000, 8.000000)">
+                        <rect id="Rectangle" fill="#5F68FC" x="0" y="0" width="24" height="24"></rect>
+                        <g id="book-icons/code" fill="#FFFFFF">
+                            <g id="code" transform="translate(5.000000, 5.000000)">
+                                <path d="M11.1125,3.7625 L13.7375,6.3875 C14.0875,6.7375 14.0875,7.2625 13.7375,7.6125 L11.1125,10.2375 L9.8875,9.0125 L11.9,7 L9.8875,4.9875 L11.1125,3.7625 Z M2.8875,3.7625 L4.1125,4.9875 L2.1,7 L4.1125,9.0125 L2.8875,10.2375 L0.2625,7.6125 C-0.0875,7.2625 -0.0875,6.7375 0.2625,6.3875 L2.8875,3.7625 Z" id="Combined-Shape" fill-rule="nonzero" opacity="0.600000024"></path>
+                                <path d="M5.25,13.125 C5.1625,13.125 5.075,13.125 4.9875,13.0375 C4.55,12.8625 4.2875,12.425 4.4625,11.9 L7.9625,1.4 C8.1375,0.9625 8.575,0.7 9.1,0.875 C9.5375,1.05 9.8,1.4875 9.625,2.0125 L6.125,12.5125 C5.95,12.8625 5.6,13.125 5.25,13.125 Z" id="Path" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

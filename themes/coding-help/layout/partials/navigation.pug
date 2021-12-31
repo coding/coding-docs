@@ -3,9 +3,10 @@
 .helpNavigation#asideMenuLeft(role="navigator")
     .helpNavigationInner
         .helpNavHeading
-            a(href=(config.root || '/'))
+            a(href=('/'))
                 span.arrow
-                = index.title
+                span#backTitle
+                    = index.title
         .helpNavBookArea
             each book in sitemap
                 - const isCurrentBook = new RegExp(`^${book.path}`).test(page.path)
@@ -16,30 +17,57 @@
                             span.name
                                 = book.compendium
                         .selectArrow
+                        .helpNavBookListAreaWrap
+                            .helpNavBookListArea#helpNavBookListArea
+                                .helpNavBookList-container
+                                    .helpNavBookList
+                                        each book in sitemap
+                                            - const isCurrentBook = new RegExp(`^${book.path}`).test(page.path)
+                                            - const firstPath = book.categories[0].links ? book.categories[0].links[0].path : book.categories[0].path
+                                                a.book(href=`${config.root || ''}${firstPath}` class={isHide: book.isHide})
+                                                    span.helpNavBookName
+                                                        span.icon(style=`background-image: url(${url_for(book.icon)})`)
+                                                        span.name
+                                                            = book.compendium
+                                                    span.selectIcon(class={isActive: isCurrentBook})
                     .helpNavDivider
                     ol.helpNavBookBody
-                        each section in book.categories
-                            - const isCurrentSection= new RegExp(`^${section.path}`).test(page.path)
-                            li.helpNavSection(class={isExpanded: isCurrentSection})
-                                .helpNavTitle
-                                    span.category
-                                        = section.title
-                                    span.arrow
-                                ol.helpNavLinks
-                                    each link in section.links
-                                        li.helpNavLinkItem(class={isActive: page.path === link.path})
-                                            a.helpNavLink(href=`${config.root || ''}${link.path}`)= link.title
-            .helpNavBookListArea#helpNavBookListArea
-                .helpNavBookList-container
-                    .helpNavBookList
-                        each book in sitemap
-                            - const isCurrentBook = new RegExp(`^${book.path}`).test(page.path)
-                                a.book(href=`${config.root || ''}${book.categories[0].links[0].path}`)
-                                    span.helpNavBookName
-                                        span.icon(style=`background-image: url(${url_for(book.icon)})`)
-                                        span.name
-                                            = book.compendium
-                                    span.selectIcon(class={isActive: isCurrentBook})
+                        each category in book.categories
+                            li.helpNavSection
+                                if category.links 
+                                    .helpNavTitle
+                                        if category.path
+                                            - const isActive = new RegExp(`^${category.path}`).test(page.path) ? 'isActive ' : ''
+                                            - const isBold = category.bold === 1 ? 'isBold' : ''
+                                            a.helpNavTitleLink.noLinks(href=`${config.root || ''}${category.path}`, class=isActive + isBold)= category.title
+                                        if !category.path
+                                            span.category
+                                                = category.title
+                                        span.arrow
+
+                                if !category.links
+                                    - const isActive = new RegExp(`^${category.path}`).test(page.path) ? 'isActive ' : ''
+                                    - const isBold = category.bold === 1 ? 'isBold' : ''
+                                    a.helpNavTitleLink.noLinks(href=`${config.root || ''}${category.path}`, class=isActive + isBold)= category.title
+
+                                if category.links 
+                                    ol.helpNavLinks
+                                        each link in category.links
+                                            if link.sections
+                                                .helpNavTitle.helpNavSecondTitle
+                                                    span.category.secondCategory
+                                                        = link.title
+                                                    span.arrow
+                                            if !link.sections
+                                                li.helpNavLinkItem(class={isActive: page.path === link.path})
+                                                    a.helpNavLink(href=`${config.root || ''}${link.path}`)= link.title
+                                            if link.sections
+                                                ol.helpNavLinks.helpNavSecondLinks
+                                                    each section in link.sections
+                                                        - const isCurrentSection= new RegExp(`^${section.path}`).test(page.path)
+                                                        li.helpNavLinkItem(class={isActive: page.path === section.path})
+                                                            a.helpNavLink.helpNavSecondLink(href=`${config.root || ''}${section.path}`)= section.title
+
 
 
 
