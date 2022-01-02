@@ -1,5 +1,6 @@
 # CODING 帮助中心
 
+[![CI](https://github.com/Coding/coding-docs/actions/workflows/ci.yml/badge.svg)](https://github.com/Coding/coding-docs/actions/workflows/ci.yml)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 本仓库是 CODING 帮助中心的文档，采用 Hexo 框架，Markdown 格式，通过持续集成强制检查下列规范：
