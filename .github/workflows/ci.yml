@@ -1,0 +1,39 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # @coding-operation/public-component-web is a private package.
+      # remove all packages, or install would fail.
+      - name: Prepare
+        run: |
+          rm package.json yarn.lock
+          yarn add lint-md-cli remark-cli remark-preset-lint-recommended fnlint
+
+      - name: Get Diff Action
+        uses: technote-space/get-diff-action@v4.0.1
+        with:
+          PATTERNS: |
+            source/**/*.md
+            *.md
+
+      - name: Lint
+        if: env.GIT_DIFF
+        run: |
+          yarn remark -f ${{ env.GIT_DIFF }}
+          yarn lint-md ${{ env.GIT_DIFF }}
+          yarn fnlint -c .fnlint.json
